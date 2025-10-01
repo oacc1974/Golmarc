@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GolmarC - POS & Facturación Electrónica para Pymes</title>
+    <meta name="description" content="Implementamos y optimizamos tu punto de venta (especialmente Loyverse) y tu Facturación Electrónica, con asesoría integral, capacitación y soporte continuo.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://golmarc.com/">
+    <meta property="og:title" content="GolmarC - POS & Facturación Electrónica para Pymes">
+    <meta property="og:description" content="Implementamos y optimizamos tu punto de venta y facturación electrónica con cero dolor de cabeza.">
+    <meta property="og:image" content="./Imagenes/logo golmarc.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://golmarc.com/">
+    <meta property="twitter:title" content="GolmarC - POS & Facturación Electrónica para Pymes">
+    <meta property="twitter:description" content="Implementamos y optimizamos tu punto de venta y facturación electrónica con cero dolor de cabeza.">
+    <meta property="twitter:image" content="./Imagenes/logo golmarc.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="./Imagenes/logo pixel.png" type="image/png">
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563EB',
+                        accent: '#10B981',
+                        dark: '#0F172A',
+                        'gray-dark': '#1F2937',
+                        'gray-light': '#E5E7EB',
+                        light: '#F8FAFC',
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        display: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <img src="./Imagenes/logo golmarc.jpg" alt="GolmarC Logo" width="150" height="40">
+            </a>
+            
+            <nav class="navbar-menu">
+                <a href="#servicios" class="navbar-menu-item">Servicios</a>
+                <a href="#beneficios" class="navbar-menu-item">Beneficios</a>
+                <a href="#testimonios" class="navbar-menu-item">Testimonios</a>
+                <a href="#contacto" class="navbar-menu-item">Contacto</a>
+            </nav>
+            
+            <button class="navbar-toggle" aria-label="Menú" aria-expanded="false" aria-controls="mobile-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Menú móvil -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <button class="mobile-menu-close" aria-label="Cerrar menú">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        
+        <div class="mobile-menu-items">
+            <a href="#servicios" class="mobile-menu-item">Servicios</a>
+            <a href="#beneficios" class="mobile-menu-item">Beneficios</a>
+            <a href="#testimonios" class="mobile-menu-item">Testimonios</a>
+            <a href="#contacto" class="mobile-menu-item">Contacto</a>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero" role="banner" aria-labelledby="hero-title">
+        <div class="container flex flex-col lg:flex-row items-center gap-xl">
+            <div class="hero-content lg:w-1/2">
+                <h1 class="hero-title" id="hero-title">Tu POS y Facturación Electrónica listos en 48 horas</h1>
+                <p class="hero-subtitle">Sistema completo de punto de venta con facturación electrónica certificada. Sin complicaciones, sin errores.</p>
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn btn-primary text-lg px-8 py-4">Solicitar Demo Gratis</a>
+                    <a href="https://wa.me/19393066175" target="_blank" rel="noopener" class="btn btn-secondary text-lg px-8 py-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="mr-2">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                </div>
+                <div class="mt-lg flex items-center gap-md text-sm text-gray-dark">
+                    <div class="flex items-center gap-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-accent" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Sin instalación compleja
+                    </div>
+                    <div class="flex items-center gap-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-accent" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Soporte 24/7
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image lg:w-1/2">
+                <img src="./Imagenes/loyverse facturacion electronica.png" alt="GolmarC POS y Facturación Electrónica - Interfaz del sistema" class="rounded-lg shadow-2xl w-full" width="600" height="400" loading="eager" decoding="async">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Cómo trabajamos -->
+    <section class="section bg-light" id="como-trabajamos">
+        <div class="container">
+            <h2 class="text-center text-2xl mb-md">Implementación en 4 pasos simples</h2>
+            <p class="text-center text-lg mb-2xl max-w-2xl mx-auto text-gray-dark">De la consulta inicial a tu sistema funcionando en tiempo récord</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-lg" data-animate="fade-up">
+                <div class="card text-center hover:shadow-xl transition-all">
+                    <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-md text-2xl font-bold">1</div>
+                    <h3 class="text-lg font-bold mb-sm">Consulta Inicial</h3>
+                    <p class="text-sm text-gray-dark">Analizamos tus necesidades en una llamada de 30 minutos</p>
+                </div>
+                <div class="card text-center hover:shadow-xl transition-all">
+                    <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-md text-2xl font-bold">2</div>
+                    <h3 class="text-lg font-bold mb-sm">Configuración</h3>
+                    <p class="text-sm text-gray-dark">Personalizamos el sistema según tu negocio</p>
+                </div>
+                <div class="card text-center hover:shadow-xl transition-all">
+                    <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-md text-2xl font-bold">3</div>
+                    <h3 class="text-lg font-bold mb-sm">Capacitación</h3>
+                    <p class="text-sm text-gray-dark">Entrenamos a tu equipo para usar el sistema</p>
+                </div>
+                <div class="card text-center hover:shadow-xl transition-all">
+                    <div class="bg-accent text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-md text-2xl font-bold">✓</div>
+                    <h3 class="text-lg font-bold mb-sm">¡Listo!</h3>
+                    <p class="text-sm text-gray-dark">Sistema operativo con soporte continuo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Nuestros Servicios -->
+    <section class="section bg-white" id="servicios" role="region" aria-labelledby="servicios-title">
+        <div class="container">
+            <h2 class="text-center text-2xl mb-md" id="servicios-title">Nuestros Servicios</h2>
+            <p class="text-center text-lg mb-2xl max-w-3xl mx-auto text-gray-dark">Ofrecemos soluciones tecnológicas integrales para tu negocio</p>
+            
+            <!-- Grid de Servicios -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-lg" data-animate="fade-up">
+                <!-- Servicio 1: Loyverse POS -->
+                <div class="card text-center hover:shadow-xl transition-all">
+                    <div class="mb-md">
+                        <img src="./Imagenes/loyverse facturacion electronica.png" alt="Sistema POS Loyverse" class="w-full h-48 object-cover rounded-lg mb-md" loading="lazy" decoding="async">
+                    </div>
+                    <h3 class="text-lg font-bold mb-sm">Loyverse + Facturación Electrónica</h3>
+                    <p class="text-sm text-gray-dark mb-md">Conectamos tu sistema POS con facturación electrónica para cumplir con requisitos fiscales sin complicaciones.</p>
+                    <a href="#contacto" class="btn btn-primary btn-sm w-full">Más información</a>
+                </div>
+
+                <!-- Servicio 2: Menú Digital -->
+                <div class="card text-center hover:shadow-xl transition-all">
+                    <div class="mb-md">
+                        <img src="./Imagenes/menu digital.png" alt="Menú Digital" class="w-full h-48 object-cover rounded-lg mb-md" loading="lazy" decoding="async">
+                    </div>
+                    <h3 class="text-lg font-bold mb-sm">Menú Digital Interactivo</h3>
+                    <p class="text-sm text-gray-dark mb-md">Moderniza tu restaurante con menús digitales atractivos y fáciles de actualizar en tiempo real.</p>
+                    <a href="#contacto" class="btn btn-primary btn-sm w-full">Más información</a>
+                </div>
+
+                <!-- Servicio 3: Video Wall -->
+                <div class="card text-center hover:shadow-xl transition-all">
+                    <div class="mb-md">
+                        <img src="./Imagenes/video wall.png" alt="Video Wall" class="w-full h-48 object-cover rounded-lg mb-md" loading="lazy" decoding="async">
+                    </div>
+                    <h3 class="text-lg font-bold mb-sm">Video Wall Digital</h3>
+                    <p class="text-sm text-gray-dark mb-md">Impacta con pantallas de gran formato. Ideal para publicidad y comunicación visual en tu negocio.</p>
+                    <a href="#contacto" class="btn btn-primary btn-sm w-full">Más información</a>
+                </div>
+
+                <!-- Servicio 4: PixelPoint POS -->
+                <div class="card text-center hover:shadow-xl transition-all">
+                    <div class="mb-md flex items-center justify-center bg-gray-100 rounded-lg" style="height: 12rem;">
+                        <img src="./Imagenes/logo pixel.png" alt="PixelPoint POS" class="max-w-full max-h-full p-4" loading="lazy" decoding="async">
+                    </div>
+                    <h3 class="text-lg font-bold mb-sm">PixelPoint POS</h3>
+                    <p class="text-sm text-gray-dark mb-md">Sistema POS empresarial robusto y escalable para restaurantes y cadenas de alto volumen.</p>
+                    <a href="#contacto" class="btn btn-primary btn-sm w-full">Más información</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Métricas/Beneficios -->
+    <section class="section bg-white" id="beneficios" role="region" aria-labelledby="beneficios-title">
+        <div class="container">
+            <h2 class="text-center text-2xl mb-xl" id="beneficios-title">Beneficios que obtendrás</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+                <div class="card text-center" data-animate="fade-up">
+                    <div class="text-primary mb-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto">
+                            <path d="M12 20v-6M6 20V10M18 20V4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl mb-sm">Reducción de errores</h3>
+                    <p class="mb-md">Disminuye hasta un 95% los errores en la emisión de comprobantes fiscales.</p>
+                    <div class="text-2xl font-bold text-primary" data-counter data-counter-target="95" data-counter-duration="2000">0</div>
+                    <p class="text-sm">% menos errores</p>
+                </div>
+                <div class="card text-center" data-animate="fade-up" data-animate-delay="200">
+                    <div class="text-primary mb-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl mb-sm">Ahorro de tiempo</h3>
+                    <p class="mb-md">Reduce el tiempo dedicado a tareas administrativas en hasta 10 horas semanales.</p>
+                    <div class="text-2xl font-bold text-primary" data-counter data-counter-target="10" data-counter-duration="2000">0</div>
+                    <p class="text-sm">horas semanales ahorradas</p>
+                </div>
+                <div class="card text-center" data-animate="fade-up" data-animate-delay="400">
+                    <div class="text-primary mb-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto">
+                            <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl mb-sm">Reducción de costos</h3>
+                    <p class="mb-md">Ahorra hasta un 30% en costos operativos relacionados con la facturación.</p>
+                    <div class="text-2xl font-bold text-primary" data-counter data-counter-target="30" data-counter-duration="2000">0</div>
+                    <p class="text-sm">% de ahorro en costos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonios -->
+    <section class="section bg-light" id="testimonios" role="region" aria-labelledby="testimonios-title">
+        <div class="container">
+            <h2 class="text-center text-2xl mb-xl" id="testimonios-title">Lo que dicen nuestros clientes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+                <div class="testimonial" data-animate="fade-up">
+                    <p class="testimonial-content">"La implementación de Loyverse con facturación electrónica ha sido un cambio radical para nuestro negocio. El proceso fue mucho más sencillo de lo que esperábamos."</p>
+                    <div class="flex items-center mt-md">
+                        <div class="rounded-full bg-gray-light w-10 h-10 flex items-center justify-center mr-sm">
+                            <span class="font-bold">JM</span>
+                        </div>
+                        <div>
+                            <p class="testimonial-author">Juan Martínez</p>
+                            <p class="testimonial-company">Cafetería El Aroma</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial" data-animate="fade-up" data-animate-delay="200">
+                    <p class="testimonial-content">"Gracias a GolmarC, ahora cumplimos con todas las normativas fiscales sin complicaciones. El soporte técnico es excelente y siempre están disponibles."</p>
+                    <div class="flex items-center mt-md">
+                        <div class="rounded-full bg-gray-light w-10 h-10 flex items-center justify-center mr-sm">
+                            <span class="font-bold">LR</span>
+                        </div>
+                        <div>
+                            <p class="testimonial-author">Laura Rodríguez</p>
+                            <p class="testimonial-company">Farmacia Bienestar</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial" data-animate="fade-up" data-animate-delay="400">
+                    <p class="testimonial-content">"La capacitación fue completa y ahora todo mi equipo maneja el sistema sin problemas. Hemos reducido errores y ahorrado mucho tiempo en procesos administrativos."</p>
+                    <div class="flex items-center mt-md">
+                        <div class="rounded-full bg-gray-light w-10 h-10 flex items-center justify-center mr-sm">
+                            <span class="font-bold">CP</span>
+                        </div>
+                        <div>
+                            <p class="testimonial-author">Carlos Pérez</p>
+                            <p class="testimonial-company">Restaurante La Esquina</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Formulario de Contacto -->
+    <section class="section bg-white" id="contacto" role="region" aria-labelledby="contacto-title">
+        <div class="container">
+            <h2 class="text-center text-2xl mb-xl" id="contacto-title">Contáctanos hoy mismo</h2>
+            <div class="flex flex-col lg:flex-row gap-xl">
+                <div class="lg:w-1/2">
+                    <form action="https://formspree.io/f/xjkarggr" method="POST" class="card bg-gradient text-white" aria-label="Formulario de contacto" role="form" id="contactForm">
+                        <h3 class="text-xl font-bold mb-md text-center">Solicita tu Demo Gratuita</h3>
+                        <p class="text-center mb-lg opacity-90">Completa el formulario y te contactaremos en menos de 24 horas</p>
+                        
+                        <div class="form-group">
+                            <label for="nombre" class="form-label text-white">Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Juan Pérez" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono" class="form-label text-white">WhatsApp *</label>
+                            <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="0999552417" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label text-white">Correo electrónico *</label>
+                            <input type="email" id="email" name="_replyto" class="form-control" placeholder="juan@empresa.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="interes" class="form-label text-white">¿Qué servicio te interesa? *</label>
+                            <select id="interes" name="servicio" class="form-control" required aria-label="Selecciona tu área de interés">
+                                <option value="" disabled selected>Selecciona una opción</option>
+                                <option value="Loyverse + Facturación Electrónica">Loyverse + Facturación Electrónica</option>
+                                <option value="Menú Digital">Menú Digital</option>
+                                <option value="Video Wall">Video Wall</option>
+                                <option value="PixelPoint POS">PixelPoint POS</option>
+                            </select>
+                        </div>
+                        <!-- Campo oculto para identificar el origen -->
+                        <input type="hidden" name="_subject" value="Nueva solicitud de demo - GolmarC">
+                        <input type="hidden" name="_next" value="https://golmarc.com/gracias.html">
+                        
+                        <button type="submit" class="btn btn-secondary w-full text-lg py-3" aria-label="Enviar formulario de contacto">
+                            Solicitar Demo Ahora
+                        </button>
+                        <p class="text-center text-sm mt-md opacity-75">🔒 Tus datos están protegidos</p>
+                    </form>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="card h-full flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl mb-md">¿Por qué elegirnos?</h3>
+                            <ul class="mb-lg">
+                                <li class="flex items-center gap-sm mb-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-accent" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    Experiencia comprobada en implementación de POS
+                                </li>
+                                <li class="flex items-center gap-sm mb-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-accent" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    Soporte técnico continuo y personalizado
+                                </li>
+                                <li class="flex items-center gap-sm mb-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-accent" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    Capacitación completa para tu equipo
+                                </li>
+                                <li class="flex items-center gap-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-accent" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    Soluciones personalizadas para tu negocio
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl mb-md">Contáctanos directamente</h3>
+                            <ul>
+                                <li class="flex items-center gap-sm mb-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                    <a href="tel:+19393066175">+1 (939) 306-6175</a>
+                                </li>
+                                <li class="flex items-center gap-sm mb-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                    <a href="mailto:ventas@golmarc.com">ventas@golmarc.com</a>
+                                </li>
+                            </ul>
+                            <div class="mt-lg">
+                                <a href="https://wa.me/19393066175" target="_blank" class="btn btn-secondary w-full">Chatear por WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Final -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <h2 class="cta-title text-3xl">Comienza hoy mismo</h2>
+            <p class="cta-description text-xl mb-xl">Más de 100 negocios ya confían en nosotros. Únete y transforma tu operación.</p>
+            <div class="flex flex-wrap justify-center gap-md">
+                <a href="#contacto" class="btn btn-secondary text-lg px-8 py-4 shadow-lg hover:shadow-2xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Solicitar Demo Gratis
+                </a>
+                <a href="https://wa.me/19393066175" target="_blank" rel="noopener" class="btn bg-white text-primary border-2 border-white text-lg px-8 py-4 shadow-lg hover:shadow-2xl hover:bg-gray-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="mr-2">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    </svg>
+                    Chatear Ahora
+                </a>
+            </div>
+            <p class="mt-lg text-white opacity-90">⚡ Respuesta en menos de 1 hora</p>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-lg md:mb-0">
+                    <div class="footer-logo mb-md">
+                        <img src="./Imagenes/logo golmarc.jpg" alt="GolmarC Logo" width="150" height="40">
+                    </div>
+                    <p class="footer-description">Implementamos y optimizamos tu punto de venta y facturación electrónica con asesoría integral, capacitación y soporte continuo.</p>
+                </div>
+                <div>
+                    <div class="flex flex-col md:flex-row gap-xl">
+                        <div class="text-center md:text-left">
+                            <h3 class="footer-heading">Enlaces rápidos</h3>
+                            <ul class="footer-links">
+                                <li class="footer-link"><a href="#servicios">Servicios</a></li>
+                                <li class="footer-link"><a href="#beneficios">Beneficios</a></li>
+                                <li class="footer-link"><a href="#testimonios">Testimonios</a></li>
+                                <li class="footer-link"><a href="#contacto">Contacto</a></li>
+                            </ul>
+                        </div>
+                        <div class="text-center md:text-left">
+                            <h3 class="footer-heading">Contacto</h3>
+                            <ul class="footer-links">
+                                <li class="footer-link flex items-center gap-sm justify-center md:justify-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                    <a href="tel:+19393066175">+1 (939) 306-6175</a>
+                                </li>
+                                <li class="footer-link flex items-center gap-sm justify-center md:justify-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                    <a href="mailto:ventas@golmarc.com">ventas@golmarc.com</a>
+                                </li>
+                            </ul>
+                            <div class="flex gap-md justify-center md:justify-start mt-md">
+                                <a href="#" class="footer-social-link" aria-label="Facebook">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="footer-social-link" aria-label="Instagram">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                    </svg>
+                                </a>
+                                <a href="#" class="footer-social-link" aria-label="LinkedIn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                        <rect x="2" y="9" width="4" height="12"></rect>
+                                        <circle cx="4" cy="4" r="2"></circle>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 GolmarC. Todos los derechos reservados.</p>
+                <div class="flex gap-md">
+                    <a href="privacidad.html" class="text-gray-light hover:text-white">Política de Privacidad</a>
+                    <a href="terminos.html" class="text-gray-light hover:text-white">Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="./js/main.js"></script>
+    <script>
+        // Inicializar contadores
+        document.addEventListener('DOMContentLoaded', function() {
+            initCounters();
+        });
+    </script>
+</body>
+</html>
