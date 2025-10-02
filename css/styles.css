@@ -124,6 +124,50 @@ img {
 }
 
 /* Utilidades de espaciado */
+.space-y-sm > * + * {
+  margin-top: var(--spacing-sm);
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+/* FAQ / Details */
+details {
+  cursor: pointer;
+}
+
+details summary {
+  list-style: none;
+  position: relative;
+  padding-right: 2rem;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::after {
+  content: '+';
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  transition: transform var(--transition-fast);
+}
+
+details[open] summary::after {
+  content: '−';
+  transform: translateY(-50%) rotate(180deg);
+}
+
+details summary:hover {
+  color: var(--color-primary);
+}
+
 .section {
   padding-top: var(--spacing-2xl);
   padding-bottom: var(--spacing-2xl);
