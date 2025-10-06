@@ -6,6 +6,8 @@ Disallow: /wordpress/
 Disallow: /admin/
 Disallow: /login/
 Disallow: /*.php$
+Disallow: /category/uncategorized
+Disallow: /uncategorized
 
 # Bloquear bots maliciosos conocidos
 User-agent: SemrushBot
