@@ -200,11 +200,8 @@ function initFormValidation() {
                 // Mostrar mensaje general de error
                 showToast('error', 'Error en el formulario', 'Por favor, revisa los campos marcados en rojo.');
             } else {
-                // En un caso real, aquí se enviaría el formulario por AJAX
-                // Para esta demo, prevenimos el envío y mostramos un mensaje de éxito
-                e.preventDefault();
-                form.reset();
-                showToast('success', '¡Formulario enviado!', 'Nos pondremos en contacto contigo pronto.');
+                // Permitir POST real a Formspree. No mostrar éxito hasta que el proveedor confirme.
+                // La página de agradecimiento depende de la configuración de redirección del proveedor.
             }
         });
     });

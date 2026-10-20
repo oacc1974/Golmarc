@@ -15,4 +15,4 @@ User-agent: AhrefsBot
 User-agent: DotBot
 Disallow: /
 
-Sitemap: https://golmarc.com/sitemap.xml
+Sitemap: https://www.golmarc.com/sitemap.xml

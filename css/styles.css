@@ -1030,3 +1030,27 @@ details summary:hover {
     display: block;
   }
 }
+
+/* Páginas de servicio y legales: reutiliza paleta de la web principal */
+.seo-hero-grid {display:grid;grid-template-columns: minmax(0,1fr) minmax(0,1fr);gap:2.5rem;align-items:center;}
+.seo-hero-image img {width:100%;border-radius:1rem;box-shadow:var(--shadow-lg);object-fit:contain;max-height:430px;}
+.seo-eyebrow {font-size:.9rem;margin-bottom:1rem;}
+.seo-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem;margin-top:2rem;}
+.seo-grid .card {height:100%;}
+.seo-grid h3 {font-size:1.2rem;}
+.seo-narrow {max-width:850px;}
+.seo-list {padding-left:1.5rem;list-style:disc;margin:1rem 0 1.5rem;}
+.seo-list li {margin-bottom:.5rem;}
+.seo-intro {max-width:800px;}
+.seo-faq {margin:0 0 1rem;cursor:default;}
+.seo-faq summary {font-weight:700;cursor:pointer;}
+.seo-faq p {margin-top:1rem;margin-bottom:0;}
+.seo-links {display:flex;flex-wrap:wrap;gap:.75rem;}
+.seo-links a {display:inline-block;padding:.65rem .9rem;border:1px solid #bfdbfe;border-radius:.75rem;background:white;}
+.seo-legal h1 {font-size:2.15rem;}
+.seo-legal h2 {font-size:1.3rem;margin-top:2rem;}
+.seo-legal p {max-width:780px;}
+.seo-draft {padding:1rem;border-left:4px solid #d97706;background:#fff7ed;font-weight:600;}
+.footer a {color:#e2e8f0;}
+.footer a:hover {color:#fff;}
+@media(max-width:760px) {.seo-hero-grid {grid-template-columns:1fr;gap:1.5rem;}.seo-grid {grid-template-columns:1fr;}.seo-hero-image {order:-1;}.seo-legal h1 {font-size:1.7rem;}}
